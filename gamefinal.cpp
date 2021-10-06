@@ -18,8 +18,9 @@ void ganador();
 int repetir(int n);
 int seguirJugando();
 void resultados();
-void ahorcado();
+void suma();
 void salir();
+
 
 int main(){
 	
@@ -34,6 +35,7 @@ int main(){
 	}
 	return 0;
 }
+
 
 //Para posicionar entre las cordenadas (x,y) ancho=80 alto=25
 void gotoxy(int x, int y){ 
@@ -74,19 +76,19 @@ void menu(){
 	gotoxy(10,10);
 	printf("1. Triqui");
 	gotoxy(10,11);
-	printf("2. Ahorcado");
-	gotoxy(18,15);
-	printf("Ingrese la opcion a utilizar\n");
+	printf("2. Suma");	
+    gotoxy(18,15);
+    printf("Ingrese la opcion a utilizar\n");
 	gotoxy(18,16);printf(" - ");
 	scanf("%d", &opcion);
 	system("cls"); 
 	
 
-	if(opcion==1 || opcion==2){
+	if(opcion==1 || opcion==2 || opcion==3){
 		switch(opcion){
 		case 1: jugadores(); break; 
 		
-		case 2: jugadores(); break;		
+		case 2: suma(); break;	                            
 		
 		}
 	}
@@ -487,7 +489,23 @@ void resultados(){
 	cout<<"Empates: "<<empate<<endl;
 }
 
-	
+void suma(){
+    int a, b, c; 
+    printf ("Digite el primer numero: "); 
+    scanf ("%d",&a); 
+
+    printf ("Digite el segundo numero: "); 
+    scanf ("%d",&b); 
+    c=a+b; 
+
+    printf("El resultado de la sumas es: %d+%d=%d", a,b,c); 
+    getch(); 
+
+   
+}
+
+
+
 
 
 
